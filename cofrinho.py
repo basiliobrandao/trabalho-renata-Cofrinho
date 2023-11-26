@@ -1,16 +1,5 @@
 from enum import Enum
 
-class Moeda(Enum):
-    dez = 10
-    vinte_cinco = 25
-    cinquenta = 50
-    cem = 100
-
-class Item:
-    def __init__(self, descricao, volume):
-        self.descricao = descricao
-        self.volume = volume
-
 class Cofrinho:
     def __init__(self, cor, volume_Max):
         self.cor = cor
@@ -20,7 +9,7 @@ class Cofrinho:
         self.itens = []
 
     def volume_disponivel(self):
-        return self.volume_maximo - self.volume_atual
+        return self.volume_Max - self.volume_atual
 
     def adicionar_moeda(self, moeda):
         if self.volume_disponivel() >= moeda.value:
@@ -39,7 +28,7 @@ class Cofrinho:
             print("Volume insuficiente para o item.")
 
     def quebrar_cofre(self):
-        print(f"Cofre quebrado!")
+        print(f"Cofre quebrado! Itens e Moedas obtidos.")
         self.moedas = []
         self.itens = []
         self.volume_atual = 0
@@ -52,3 +41,16 @@ class Cofrinho:
     def valor_total(self):
         valor_moedas = sum([moeda.value for moeda in self.moedas])
         print(f"Valor total em moedas no cofre: {valor_moedas}")
+
+class Item:
+    def __init__(self, descricao, volume):
+        self.descricao = descricao
+        self.volume = volume
+
+class Moeda(Enum):
+    dez = 10
+    vinte_cinco = 25
+    cinquenta = 50
+    cem = 100
+
+
