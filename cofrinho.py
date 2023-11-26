@@ -48,9 +48,9 @@ class Item:
         self.volume = volume
 
 class Moeda(Enum):
-    dez = 10
-    vinte_cinco = 25
-    cinquenta = 50
-    cem = 100
+    M10 = 10
+    M25 = 25
+    M50 = 50
+    M100 = 100
 
 
