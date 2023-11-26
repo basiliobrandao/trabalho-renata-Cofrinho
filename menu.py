@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
         elif opcao == "3":
             cofre.quebrar_cofre()
-    
+            
         elif opcao == "4":
             print(f"Volume livre no cofre: {cofre.volume_disponivel()}")
 
