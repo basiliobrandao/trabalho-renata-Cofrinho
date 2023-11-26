@@ -1,4 +1,4 @@
-from cofrinho import Cofrinho, Moeda, Item
+from cofrinho import Cofrinho, Item, Moeda
 
 if __name__ == "__main__":
     cor_cofre = input("Digite uma cor para o cofre: ")
